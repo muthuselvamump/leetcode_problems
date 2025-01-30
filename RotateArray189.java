@@ -1,17 +1,18 @@
 class Solution189 {
     public void rotate(int[] nums, int k) {
-        int temp;
-        for(int i=0;i<k;i++){
-            temp=nums[nums.length-1];
-            for(int j=nums.length-1;j>0;j--){
-                nums[j]=nums[j-1];
-
-            }
-            nums[0]=temp;
-        }        
+        k=k%nums.length;
+        r(nums,0,nums.length-1);
+        r(nums,0,k-1);
+        r(nums,k,nums.length-1);
+    }
+    public void r(int arr[],int s,int e){
+        while(s<e){
+            int temp=arr[s];
+            arr[s++]=arr[e];
+            arr[e--]=temp;
+        }
     }
 }
-
 public class RotateArray189 {
     public static void main(String[] args) {
         
