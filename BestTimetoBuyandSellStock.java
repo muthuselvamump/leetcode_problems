@@ -1,4 +1,4 @@
-class Solution {
+class Solution121{
     public int maxProfit(int[] prices) {
         int min=Integer.MAX_VALUE;
         int profit=0;
@@ -10,7 +10,7 @@ class Solution {
                 profit=prices[i]-min;
             }
         }
-        
+        return profit;
         
     }
 }       
