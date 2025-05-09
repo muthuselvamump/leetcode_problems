@@ -1,6 +1,6 @@
 public class find_the_single_number2_bitcount_solution {
     public static void main(String[] args) {
-        int []arr={1,1,1,2,2,2,6,3,3,3};
+        int []arr={1,1,1,2,2,2,6,3,3,3,6,6,8};
         System.out.println(findsinglenumber(arr));
         
     }
@@ -17,7 +17,7 @@ public class find_the_single_number2_bitcount_solution {
             if(setbitcount%3!=0){
                 ans |=1<<i;
             }
-            
+            setbitcount=0;
         }
         return ans;
         
