@@ -20,11 +20,27 @@ class Solution9 {
         return isPalindrome1(x/10,ans);
 
     }
+    public boolean isPalindrome3(int x) {
+        if(x<0){
+            return false;
+        }
+        return x==reverseintpalin(x,0);
+        
+    }
+     public int reverseintpalin(int n,int sum){
+        if(n==0){
+            return sum;
+        }
+        sum=10*sum+(n%10);
+        return reverseintpalin(n/10,sum);
+    }
 }
 public class Palindrome_Number {
     public static void main(String[] args) {
         Solution9 n=new Solution9();
         System.out.println( 45455==n.isPalindrome1(45455, 0) );
+        System.out.println( 454==n.isPalindrome1(454, 0) );
+        System.out.println(n.isPalindrome3(22222));
         
     }
     
