@@ -1,7 +1,8 @@
 public class maze {
     public static void main(String[] args) {
-        //System.out.println(mazedownadn(3, 3));
-        //mazedownadn("", 3, 3);
+        System.out.println(mazedownadn(3, 3));
+        mazedownadn("", 3, 3);
+        System.out.println(" diag part");
         mazediag("", 0, 0, new boolean[3][3]);
     }
     public static int mazedownadn(int r,int c) {
@@ -31,7 +32,7 @@ public class maze {
         
     }
      public static void mazediag(String path,int r,int c,boolean bool[][]) {
-        if(r==bool.length-1 && c==bool.length-1){
+        if(r==bool.length-1 && c==bool[0].length-1){
             System.out.println(path);
             return;
         }
