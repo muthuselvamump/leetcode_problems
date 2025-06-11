@@ -48,6 +48,23 @@ public class maze {
         }
         
     }
+    public static void mazeall(String path,int r,int c,boolean bool[][]) {
+        if(r==bool.length-1 && c==bool[0].length-1){
+            System.out.println(path);
+            return;
+        }
+        
+        if(r<bool.length-1){
+        mazeall(path+"D", r+1, c, bool);
+        }
+        if(c<bool[0].length-1){
+        mazeall(path+"R", r, c+1, bool);
+        }
+        if(c<bool[0].length-1 && r<bool.length-1){
+            mazeall(path+"X", r+1, c+1, bool);
+        }
+        
+    }
         
 
     
