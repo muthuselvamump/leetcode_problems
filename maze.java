@@ -63,6 +63,13 @@ public class maze {
         if(c<bool[0].length-1 && r<bool.length-1){
             mazeall(path+"X", r+1, c+1, bool);
         }
+        if(c<bool[0].length-1 && r<bool.length-1){
+            mazeall(path+"U", r+1, c+1, bool);
+        }
+        if(c<bool[0].length-1 && r<bool.length-1){
+            mazeall(path+"L", r+1, c+1, bool);
+        }
+
         
     }
         
