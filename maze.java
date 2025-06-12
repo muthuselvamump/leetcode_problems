@@ -1,9 +1,10 @@
 public class maze {
     public static void main(String[] args) {
-        System.out.println(mazedownadn(3, 3));
-        mazedownadn("", 3, 3);
+        //System.out.println(mazedownadn(3, 3));
+        //mazedownadn("", 3, 3);
         System.out.println(" diag part");
-        mazediag("", 0, 0, new boolean[3][3]);
+        //mazediag("", 0, 0, new boolean[3][3]);
+        mazeall("", 0, 0, new boolean[3][3]);
     }
     public static int mazedownadn(int r,int c) {
         if(r==1 || c==1){
@@ -53,22 +54,32 @@ public class maze {
             System.out.println(path);
             return;
         }
-        
+        if(bool[r][c]){
+            return;
+        }
+        bool[r][c]=true;
         if(r<bool.length-1){
+            
         mazeall(path+"D", r+1, c, bool);
         }
         if(c<bool[0].length-1){
+            
         mazeall(path+"R", r, c+1, bool);
         }
         if(c<bool[0].length-1 && r<bool.length-1){
+            
             mazeall(path+"X", r+1, c+1, bool);
         }
-        if(c<bool[0].length-1 && r<bool.length-1){
-            mazeall(path+"U", r+1, c+1, bool);
+        if( r>0){
+            
+            mazeall(path+"U", r-1, c, bool);
         }
-        if(c<bool[0].length-1 && r<bool.length-1){
-            mazeall(path+"L", r+1, c+1, bool);
+        if(c>0){
+        
+            mazeall(path+"L", r, c-1, bool);
         }
+        bool[r][c]=false;
+        
 
         
     }
