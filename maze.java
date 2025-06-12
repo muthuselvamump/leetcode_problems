@@ -6,29 +6,29 @@ public class maze {
         //mazediag("", 0, 0, new boolean[3][3]);
         mazeall("", 0, 0, new boolean[3][3]);
     }
-    public static int mazedownadn(int r,int c) {
+    public static int mazedownandrightcount(int r,int c) {
         if(r==1 || c==1){
             return 1;
         }
         
         
-        int countl=mazedownadn(r-1,c);
-        int countr=mazedownadn(r,c-1);
+        int countl=mazedownandrightcount(r-1,c);
+        int countr=mazedownandrightcount(r,c-1);
 
         return countl+countr;
         
     }
-    public static void mazedownadn(String path,int r,int c) {
+    public static void mazedownandright(String path,int r,int c) {
         if(r==1 && c==1){
             System.out.println(path);
             return;
         }
         
         if(r>1){
-        mazedownadn(path+"D",r-1,c);
+        mazedownandright(path+"D",r-1,c);
         }
         if(c>1){
-        mazedownadn(path+"R",r,c-1);
+        mazedownandright(path+"R",r,c-1);
         }
         
     }
