@@ -4,7 +4,10 @@ public class maze {
         //mazedownadn("", 3, 3);
         System.out.println(" diag part");
         //mazediag("", 0, 0, new boolean[3][3]);
-        mazeall("", 0, 0, new boolean[3][3]);
+        //mazeall("", 0, 0, new boolean[3][3]);
+        boolean[][] bool=new boolean[3][3];
+        bool[1][1]=true;
+        mazeobstacles("", 0, 0, bool);
     }
     public static int mazedownandrightcount(int r,int c) {
         if(r==1 || c==1){
@@ -103,14 +106,7 @@ public class maze {
             
             mazeobstacles(path+"X", r+1, c+1, bool);
         }
-        if( r>0){
-            
-            mazeobstacles(path+"U", r-1, c, bool);
-        }
-        if(c>0){
-        
-            mazeobstacles(path+"L", r, c-1, bool);
-        }
+    
         
 
         
