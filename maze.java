@@ -83,6 +83,38 @@ public class maze {
 
         
     }
+    public static void mazeobstacles(String path,int r,int c,boolean bool[][]) {
+        if(r==bool.length-1 && c==bool[0].length-1){
+            System.out.println(path);
+            return;
+        }
+        if(bool[r][c]){
+            return;
+        }
+        if(r<bool.length-1){
+            
+        mazeobstacles(path+"D", r+1, c, bool);
+        }
+        if(c<bool[0].length-1){
+            
+        mazeobstacles(path+"R", r, c+1, bool);
+        }
+        if(c<bool[0].length-1 && r<bool.length-1){
+            
+            mazeobstacles(path+"X", r+1, c+1, bool);
+        }
+        if( r>0){
+            
+            mazeobstacles(path+"U", r-1, c, bool);
+        }
+        if(c>0){
+        
+            mazeobstacles(path+"L", r, c-1, bool);
+        }
+        
+
+        
+    }
         
 
     
