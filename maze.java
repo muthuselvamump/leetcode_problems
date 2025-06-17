@@ -3,8 +3,8 @@ public class maze {
         //System.out.println(mazedownadn(3, 3));
         //mazedownadn("", 3, 3);
         System.out.println(" diag part");
-        //mazediag("", 0, 0, new boolean[3][3]);
-        //mazeall("", 0, 0, new boolean[3][3]);
+        mazediag("", 0, 0, new boolean[3][3]);
+        mazeall("", 0, 0, new boolean[3][3]);
         boolean[][] bool=new boolean[3][3];
         bool[1][1]=true;
         mazeobstacles("", 0, 0, bool);
