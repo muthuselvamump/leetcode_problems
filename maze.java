@@ -4,9 +4,11 @@ public class maze {
         //mazedownadn("", 3, 3);
         System.out.println(" diag part");
         mazediag("", 0, 0, new boolean[3][3]);
+        System.out.println(" ALL DIRECTION");
         mazeall("", 0, 0, new boolean[3][3]);
         boolean[][] bool=new boolean[3][3];
         bool[1][1]=true;
+        System.out.println(" WITH OBSTACLES");
         mazeobstacles("", 0, 0, bool);
     }
     public static int mazedownandrightcount(int r,int c) {
