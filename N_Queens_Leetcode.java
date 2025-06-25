@@ -70,7 +70,8 @@ class Solution51 {
 }
 public class N_Queens_Leetcode {
  public static void main(String[] args) {
-   
+    Solution51 s51=new Solution51();
+    System.out.println(s51.solveNQueens(4));
     
  }   
     
