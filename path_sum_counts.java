@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class path_sum_counts {
     public static void main(String []args){
 
@@ -8,16 +10,13 @@ public class path_sum_counts {
         }
         list.add(root.val);
         int count=0;
-        int i=list.size()-1;
         int s=0;
 
-        while(!list.isEmpty()){
-            s+=list.get(i--);
+        for(int i=list.size()-1;i>=0;i--){
+            s+=list.get(i);
             if(s==sum){
                 count++;
             }
-
-
         }
                                                                                                     
         count+=pathsum(root.left, list);
