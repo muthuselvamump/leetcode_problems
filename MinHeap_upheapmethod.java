@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 class MinHeap_upheap{
     ArrayList<Integer> heap=new ArrayList<>();
@@ -33,7 +34,10 @@ private void insert1(int val){
 
 
 }
-public int takeback(){
+public int takeback (){
+    if (heap.isEmpty()) {
+    throw new NoSuchElementException("Heap is empty");
+}
     if(heap.size()==1){
         return heap.remove(0);
     }
