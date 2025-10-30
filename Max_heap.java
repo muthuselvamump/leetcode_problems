@@ -26,7 +26,12 @@ class max{
 public class Max_heap {
     public static void main(String[] args) {
         max m=new max();
-       
+        m.insert(4);
+        m.insert(55);
+        m.insert(22);
+        m.insert(9);
+        m.insert(88);
+        m.display();
 
 
     }
