@@ -29,7 +29,12 @@ class Entity{
 public class HashMap_implementation_using_object {
     public static void main(String[] args) {
 
-       
+        Hashmapobj obj=new Hashmapobj();
+        obj.put("java", "spring");
+        obj.put("javascript", "nodejs");
+        obj.put("css", "bootstrap");
+       // obj.remove("java");
+        System.out.println(obj.get("java"));
         
     }
     
