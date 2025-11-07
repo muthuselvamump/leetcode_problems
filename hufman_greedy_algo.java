@@ -99,7 +99,13 @@ class huffman{
 }
 public class hufman_greedy_algo {
     public static void main(String[] args) {
-     
+        String st="abca";
+
+        huffman h=new huffman(st);
+        String d=h.encode(st);
+        System.out.println(h.encode(st));
+
+        System.out.println(h.decode(d));
         
     }
 }
