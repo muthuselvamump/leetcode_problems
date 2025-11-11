@@ -32,7 +32,6 @@ public class Range_quries_algo {
             left=left+sqrt;
         }
         //right part
-
         while(left<=right){
             ans+=arr[left++];
         }
